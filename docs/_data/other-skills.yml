@@ -1,7 +1,3 @@
-- name: Adobe Photoshop
-  percentage: 95
-  color: info
-
-- name: Adobe Illustrator
+- name: OSINT/Info Gathering
   percentage: 90
-  color: success
+  color: info
