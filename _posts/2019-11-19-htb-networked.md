@@ -16,7 +16,7 @@ Alright, lets get down to it. First things first, nmap scan.
 
 ![nmap](../images/nmap_networked.png "nmap scan")
 
-While that was running, I went ahead and started running both a dirb and nikto.
+While that was running, I went ahead and started running both a dirb and nikto scan.
 
 `dirb http://10.10.10.146 -r`
 
