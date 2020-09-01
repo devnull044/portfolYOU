@@ -1,6 +1,6 @@
 ---
 title: HTB - Networked
-tags: [Hacking, HTB, Security, Linux, PHP, Easy]
+tags: [Hacking, HTB, Security, Linux, PHP, Easy, Retired]
 style:
 color:
 description: Here is my write up for the box Networked via Hackthebox.
