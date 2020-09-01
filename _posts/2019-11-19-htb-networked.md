@@ -30,7 +30,7 @@ While that was running, I went ahead and started running both a dirb and nikto s
 
 During the enum phase, dirb identified `backup.tar`. Downloading the tar file and unpacking it reveals the workings of `upload.php`. THe `upload.php` file only checks the extension of the file and if its under 60000k.
 
-*insert vulnerbale php code screenshot*
+![upload.php workings](../images/upload_networked.png "upload.php workings")
 
 Since we know how `upload.php` works, we can now upload a reverse shell and bypass the checks by modifying the request via Burp. I used pentestmonkey's handy dandy reverse PHP shell.
 
