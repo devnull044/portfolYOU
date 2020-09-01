@@ -55,7 +55,7 @@ In the cron jobs section, we notice a job `check_attack`. Reading the contents o
 
 `touch test.txt`  
 
-![touch test](..images/touch_test_networked.png "touch test")  
+![touch test](../images/touch_test_networked.png "touch test")  
 
 Walla! It worked!
 
@@ -79,7 +79,7 @@ We can find the `user.txt` in its normal spot.
 
 Now that we have a little higher privileges lets do some more enumeration. First things first, checking if we can run anything as root via `sudo`.
 
-`sudo -l`
+`sudo -l`  
 ![sudo -l](../images/sudol_networked.png "sudo -l command")
 
 Looks like we can run the above command as root. Quick google search?
