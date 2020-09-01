@@ -34,7 +34,7 @@ During the enum phase, dirb identified `backup.tar`. Downloading the tar file an
 
 Since we know how `upload.php` works, we can now upload a reverse shell and bypass the checks by modifying the request via Burp. I used pentestmonkey's handy dandy reverse PHP shell.
 
-*insert screenshot of modifying request*
+![burp modify request](../images/mod_req_networked.png "burp modify request")
 
 ## 3. Privilege Escalation to Guly
 
