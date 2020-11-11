@@ -1,3 +1,11 @@
 - name: OSINT/Info Gathering
   percentage: 90
   color: info
+  
+- name: Web Application Testing
+  percentage: 77
+  color: info
+  
+- name: Penetration Testing
+  percentage: 75
+  color: info
