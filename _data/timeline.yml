@@ -3,9 +3,13 @@
   to: 2018
   description: I have a BS in Computer Information Systems and a MS in Cybersecurity Studies.
 
+- title: Sr. Cyber Security Analyst, Some Company, US
+  from: 2020
+  to: Present
+
 - title: Malware Analyst, Some Company, US
   from: 2018
-  to: present
+  to: 2020
                
 - title: SOC Analyst, Some Company, US
   from: 2017

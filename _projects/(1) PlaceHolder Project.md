@@ -1,7 +1,7 @@
 ---
-name: PlaceHolder Project
+name: PlaceHolder
 tools: [nothing, important]
-image: https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-external_url: https://www.google.com
+image: https://cdn.imgbin.com/12/25/12/imgbin-john-travolta-pulp-fiction-confused-john-travolta-8WH5VaVxdcc8EhA1WqfwtTw4W.jpg
+description: Whats going here?
+external_url: https://www.youtube.com/watch?v=Mnb_3ibUp38
 ---

@@ -4,7 +4,7 @@
 
 - name: Bash
   percentage: 88
-  color:
+  color: danger
   
 - name: HTML/CSS
   percentage: 50
